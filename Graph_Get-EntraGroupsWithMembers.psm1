@@ -137,7 +137,7 @@ function Get-AllGroupsWithDistinctMembers {
     $UserCache = @{}  # Hashtable to cache user data (ensuring distinct users)
 
     # Retrieve all groups
-    $groups = Get-MgGroup -All -Property 'id,displayName,groupTypes'
+    $groups = Get-MgGroup -All -Property 'id,displayName,groupTypes,description'
 
     Write-Host "Total Groups Found: $($groups.Count)"
 
